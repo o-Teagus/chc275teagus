@@ -1,3 +1,5 @@
+import random
+
 # CHC-275 Semester Project: Tropical Island Weather App
 # Author: [Your Name]
 # Description: This program tells the weather on a tropical island based on the condition of a rock.
