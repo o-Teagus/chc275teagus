@@ -3,7 +3,7 @@ import random
 #   ACCOUNT/BANK
 
 accounts = ["Basmaci", "Teague", "Lettuce", "Frank", "Preston"]
-balances = [1000, 2000, 3000, 4000, 5000]
+balances = [-100000, 2000, 3000, 4000, 5000]
 
 current_account = None
 bet = 1 
@@ -75,9 +75,7 @@ def bank_menu():
 
         else:
             print("Invalid option.")
-
 #       SLOTS
-
 def play_slots():
     global bet
     symbols = ["🍒", "🍋", "🔔", "💎", "7", "🍀"]
@@ -139,9 +137,7 @@ def play_slots():
 
         else:
             print("Invalid choice.")
-
 #       ROULETTE GAME
-
 def play_roulette():
     global bet
     red_numbers = {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36}
@@ -241,7 +237,7 @@ def play_roulette():
 
             if guess == roll:
                 winnings = bet * 35
-                print(f"🎯 EXACT MATCH! You win {winnings} coins!")
+                print(f" EXACT MATCH! You win {winnings} coins!")
                 balances[current_account] += winnings
             else:
                 print("No match. You lose.")
@@ -251,9 +247,7 @@ def play_roulette():
             print("Invalid choice.")
 
         print(f"New balance for {accounts[current_account]}: ${balances[current_account]}")
-
 #       BLACKJACK
-
 def play_blackjack():
     global bet
 
@@ -340,7 +334,7 @@ def play_blackjack():
             # RESULTS
             if dealer_total > 21 or player_total > dealer_total:
                 winnings = bet * 2
-                print(f"🎉 YOU WIN {winnings}!")
+                print(f" YOU WIN {winnings}!")
                 balances[current_account] += winnings
             elif player_total == dealer_total:
                 print("Push. Your bet is returned.")
@@ -353,9 +347,7 @@ def play_blackjack():
 
         else:
             print("Invalid choice.")
-
 # -CASINO MENU
-
 def main_menu():
     print("Welcome to the Casino program. Select or create an account in Bank menu before playing.")
     while True:
